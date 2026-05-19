@@ -1,0 +1,36 @@
+{
+  "name": "pi-ast-outline",
+  "version": "0.1.0",
+  "description": "Pi extension exposing ast-outline as first-class tools plus a read substitution hook",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "ast-outline"
+  ],
+  "type": "module",
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "scripts": {
+    "check": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.74.0"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "^0.74.0",
+    "@types/node": "^24",
+    "typebox": "^1.0.55",
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "typebox": "^1.0.55"
+  }
+}
