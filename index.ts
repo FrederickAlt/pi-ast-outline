@@ -442,27 +442,6 @@ export default function (pi: ExtensionAPI) {
 
   registerAstTool(
     pi,
-    "index_codebase",
-    "Build, refresh, or inspect the per-repo search index.",
-    Type.Object({
-      path: COMMON_PARAMS.path_root,
-      rebuild: COMMON_PARAMS.rebuild,
-      stats: Type.Optional(Type.Boolean({ description: "Print index stats and return." })),
-      json: COMMON_PARAMS.json,
-    }),
-    (p) => {
-      const args = ["index", (p.path as string | undefined) ?? "."];
-      addBool(args, "--rebuild", p.rebuild);
-      addBool(args, "--stats", p.stats);
-      addBool(args, "--json", p.json);
-      addBool(args, "--compact", p.json);
-      return args;
-    },
-    "Manage the per-repo search index.",
-  );
-
-  registerAstTool(
-    pi,
     "find_callers",
     "Find callers of a symbol — AST-accurate, no grep noise. Suffix-matches: TakeDamage, Type.method, or file:Symbol.",
     Type.Object({

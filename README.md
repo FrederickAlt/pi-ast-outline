@@ -17,11 +17,10 @@ Registers one Pi tool per ast-outline command:
 | `reverse-deps` | `imported_by` |
 | `cycles` | `detect_import_cycles` |
 | `graph` | `show_dependency_graph` |
-| `index` | `index_codebase` |
 | `callers` | `find_callers` |
 | `callees` | `find_callees` |
 
-`search` and `find-related` are omitted for now — their results often overflow the LLM context window.
+`index`, `search`, and `find-related` are omitted for now — the index only backs search-related commands, and those result sets often overflow the LLM context window.
 
 The tool descriptions and usage guidelines are inlined in the registration calls rather than sourced from ast-outline's MCP catalogue.
 
